@@ -3,7 +3,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders import DirectoryLoader
 from langchain_community.vectorstores import Chroma
-from decouple import config
 import streamlit as st
 
 
