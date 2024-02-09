@@ -12,7 +12,7 @@ import streamlit as st
 from langchain.embeddings import OpenAIEmbeddings
 embedding=OpenAIEmbeddings(openai_api_key= st.secrets.OPENAI_API_KEY)
 vectordb = Chroma(
-    persist_directory= "C:/Users/USER/Downloads/Retrival_methods/new_chroma_sop/db",
+    persist_directory= "./db",
     embedding_function=embedding,
     
 )
