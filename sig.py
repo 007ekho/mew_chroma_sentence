@@ -4,10 +4,11 @@ from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders import DirectoryLoader
 from langchain_community.vectorstores import Chroma
 from decouple import config
+import streamlit as st
 
 
 from langchain.embeddings import OpenAIEmbeddings
-embedding=OpenAIEmbeddings(openai_api_key= "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")
+embedding=OpenAIEmbeddings(openai_api_key= st.secrets.OPENAI_API_KEY)
 vectordb = Chroma(
     persist_directory= "C:/Users/USER/Downloads/Retrival_methods/new_chroma_sop/db",
     embedding_function=embedding,
@@ -17,7 +18,7 @@ vectordb = Chroma(
 chroma_retriever = Chroma()
 from langchain.chat_models import ChatOpenAI
 
-llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613",openai_api_key= "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")
+llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613",openai_api_key= st.secrets.OPENAI_API_KEY)
 
 from langchain.chains import RetrievalQA
 
