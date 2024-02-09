@@ -8,5 +8,5 @@ torch
 pypdf
 sentence-transformers
 langchain
-chromadb
+Chroma
 
