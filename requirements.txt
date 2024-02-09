@@ -8,4 +8,4 @@ torch
 pypdf
 sentence-transformers
 langchain
-decouple
+
