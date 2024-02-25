@@ -53,11 +53,15 @@ def rag_func(question: str) ->str:
 #     # for source in llm_response["source_documents"]:
 #     #     return source.metadata['source']
 
-
 def process_llm_response(llm_response):
     result = llm_response['result']
-    for source in llm_response["source_documents"]:
-        return result, source.metadata['source']
+    return result 
+
+
+# def process_llm_response(llm_response):
+#     result = llm_response['result']
+#     for source in llm_response["source_documents"]:
+#         return result, source.metadata['source']
 
 def s(llm_response):
     for source in llm_response["source_documents"]:
