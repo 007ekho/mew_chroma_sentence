@@ -59,3 +59,8 @@ def process_llm_response(llm_response):
     for source in llm_response["source_documents"]:
         return result, source.metadata['source']
 
+def s(llm_response):
+    for source in llm_response["source_documents"]:
+        return  source.metadata['source']
+
+
