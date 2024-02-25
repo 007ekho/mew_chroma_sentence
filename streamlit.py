@@ -33,7 +33,10 @@ if st.session_state.messages[-1]["role"]!= "assistant":
         with st.spinner("Thinking...."):
             ai_response = rag_func(user_prompt)
             llm_response = process_llm_response(ai_response)
+            res = s(ai_response)
             st.write(llm_response)
+            st.write(f"Source: {res}")
+            
 
 
     new_ai_message = {"role": "assistant", "content": llm_response}
