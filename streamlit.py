@@ -3,6 +3,7 @@ import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 from sig import rag_func
+from sig import s
 from sig import process_llm_response
 if "messages" not in st.session_state.keys():
     st.session_state["messages"]=[
